@@ -10,11 +10,8 @@
       </program>
 
 
-      <program name="cg-proc -w">
+      <program name="cg-proc -w -1 -n">
         <file name="niv-rus.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="niv-rus.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -54,11 +51,8 @@
       </program>
 
 
-      <program name="cg-proc -w">
+      <program name="cg-proc -w -1 -n">
         <file name="rus-niv.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="rus-niv.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
