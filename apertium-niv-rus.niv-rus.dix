@@ -42,18 +42,19 @@
 
     <sdef n="subj"            c="Subject"/>
     <sdef n="excl"            c="Exclusive"/>
-    <sdef n="incl"             c="Inclusive"/>
+    <sdef n="incl"            c="Inclusive"/>
     <sdef n="p1"              c="1st person"/>
     <sdef n="p2"              c="2nd person"/>
     <sdef n="p3"              c="3rd person"/>
 
     <sdef n="nt"              c="Neuter"/>
-    <sdef n="ut"              c="Utrum"/>
     <sdef n="f"               c="Feminine"/>
     <sdef n="m"               c="Masculine"/>
-    <sdef n="mf"              c="Male or Female"/>
+    <sdef n="mf"              c="Masculine or Feminine"/>
+    <sdef n="mfn"             c="Masculine, Feminine, or Neuter"/>
     <sdef n="un"              c="No gender"/>
-    <sdef n="aa"              c="Animacy"/>
+
+    <sdef n="aa"              c="Animate"/>
     <sdef n="an"              c="Animate or Inanimate"/>
     <sdef n="nn"              c="Inanimate"/>
 
@@ -245,8 +246,8 @@
       <e><p><l>р̌авӈыкс<s n="n"/></l><r>рододендрон<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>кʼмый<s n="n"/></l><r>дуб<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>ӈарӈи<s n="n"/></l><r>ель<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
-      <e c="(tree)"><p><l>тэуӈи<s n="n"/></l><r>клён<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
-      <e c="(tree)"><p><l>тэвӻай<s n="n"/></l><r>клён<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+      <e><p><l>тэуӈи<s n="n"/></l><r>клён<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+      <e><p><l>тэвӻай<s n="n"/></l><r>клён<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>ӿивс<s n="n"/></l><r>береза<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>мускыр<s n="n"/></l><r>тополь<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e c="(rush, reed)"><p><l>каӻӈ<s n="n"/></l><r>тростник<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
@@ -259,10 +260,10 @@
       <e><p><l>ар<s n="n"/></l><r>мужской пол<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>ӈайк<s n="n"/></l><r>щенок<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
       <e><p><l>найӄнонӄ<s n="n"/></l><r>щенок<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
-      <e c="(female)"><p><l>кʼыск<s n="n"/></l><r>кошка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
-      <e c="(male)"><p><l>архыск<s n="n"/></l><r>кот<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+      <e><p><l>кʼыск<s n="n"/></l><r>кошка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
+      <e><p><l>архыск<s n="n"/></l><r>кот<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
       <e><p><l>олоӈ<s n="n"/></l><r>свинья<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
-      <e c="(also bull)"><p><l>арэӻа<s n="n"/></l><r>бык<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+      <e><p><l>арэӻа<s n="n"/></l><r>бык<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
       <e><p><l>мур<s n="n"/></l><r>лошадь<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>армур<s n="n"/></l><r>конь<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
       <e><p><l>чӈыр<s n="n"/></l><r>сено<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
@@ -452,21 +453,21 @@
       <e><p><l>вуквук<s n="v"/><s n="iv"/></l><r>тёмный<s n="adj"/></r></p></e>
 
       <!-- pronouns -->
-      <e><p><l>ни<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>я<s n="prn"/><s n="p1"/><s n="mf"/><s n="subj"/><s n="sg"/></r></p></e>
-      <e><p><l>чи<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></l><r>ты<s n="prn"/><s n="p2"/><s n="mf"/><s n="subj"/><s n="sp"/></r></p></e>
-      <e><p><l>иф<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>он<s n="prn"/><s n="p3"/><s n="m"/><s n="subj"/><s n="sg"/></r></p></e>
-      <e><p><l>ньыӈ<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="excl"/></l><r>мы<s n="prn"/><s n="p1"/><s n="mf"/><s n="subj"/><s n="pl"/></r></p></e>
-      <e c="(y'all and I)"><p><l>мер<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="incl"/></l><r>мы<s n="prn"/><s n="p1"/><s n="mf"/><s n="subj"/><s n="pl"/></r></p></e>
-      <e c="(you and I)"><p><l>меги<s n="prn"/><s n="pers"/><s n="p1"/><s n="du"/><s n="incl"/></l><r>мы<s n="prn"/><s n="p1"/><s n="mf"/><s n="subj"/><s n="pl"/></r></p></e>
-      <e c="(y'all)"><p><l>чыӈ<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/></l><r>вы<s n="prn"/><s n="p2"/><s n="mf"/><s n="subj"/><s n="sp"/></r></p></e>
-      <e c="(they)"><p><l>имӈ<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>они<s n="prn"/><s n="p3"/><s n="mf"/><s n="subj"/><s n="pl"/></r></p></e>
+      <e><p><l>ни<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>я<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
+      <e><p><l>чи<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></l><r>ты<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></r></p></e>
+      <e><p><l>иф<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>он<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+      <e><p><l>ньыӈ<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="excl"/></l><r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e>
+      <e c="(y'all and I)"><p><l>мер<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/><s n="incl"/></l><r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e>
+      <e c="(you and I)"><p><l>меги<s n="prn"/><s n="pers"/><s n="p1"/><s n="du"/><s n="incl"/></l><r>мы<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e>
+      <e c="(y'all)"><p><l>чыӈ<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/></l><r>вы<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e>
+      <e c="(they)"><p><l>имӈ<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>они<s n="prn"/><s n="pers"/><s n="p3"/><s n="mfn"/><s n="pl"/></r></p></e>
       <e c="(oneself)"><p><l>пʼи<s n="prn"/><s n="ref"/></l><r>себя<s n="prn"/><s n="ref"/></r></p></e>
       <e c="(one's own)"><p><l>пʼи<s n="det"/><s n="ref"/><s n="poss"/></l><r>свой<s n="det"/><s n="pos"/></r></p></e>
 
-      <e><p><l>аӈ<s n="prn"/><s n="itg"/></l><r>кто<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></r></p></e>
+      <e><p><l>аӈ<s n="prn"/><s n="itg"/></l><r>кто<s n="prn"/><s n="itg"/><s n="m"/><s n="aa"/><s n="sg"/></r></p></e>
 
       <e c="(something like this)"><p><l>ӿуӈрыдь<s n="prn"/><s n="indef"/></l><r>такой<s n="det"/><s n="ind"/></r></p></e>
-      <e><p><l>тыдь<s n="prn"/><s n="dem"/></l><r>это<s n="prn"/><s n="dem"/></r></p></e>
+      <e><p><l>тыдь<s n="prn"/><s n="dem"/></l><r>это<s n="prn"/><s n="dem"/><s n="nt"/><s n="sg"/></r></p></e>
       <e><p><l>ӿы<s n="det"/><s n="dem"/></l><r>тот<s n="det"/><s n="dem"/></r></p></e>
       <e><p><l>ты<s n="det"/><s n="dem"/></l><r>этот<s n="det"/><s n="dem"/></r></p></e>
 
