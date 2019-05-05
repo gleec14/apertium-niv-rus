@@ -53,6 +53,8 @@
     <sdef n="m"               c="Masculine"/>
     <sdef n="mf"              c="Male or Female"/>
     <sdef n="un"              c="No gender"/>
+    <sdef n="aa"              c="Animacy"/>
+    <sdef n="nn"              c="Inanimate"/>
 
     <sdef n="du"              c="Dual"/>
     <sdef n="pl"              c="Plural"/>

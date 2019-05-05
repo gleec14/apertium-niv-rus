@@ -5,11 +5,53 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="SV">
+      <cat-item tags="SV"/>
+      <cat-item tags="SV.*"/>
+    </def-cat>
+    <def-cat n="SP">
+      <cat-item tags="SP"/>
+      <cat-item tags="SP.*"/>
+    </def-cat>
+    <def-cat n="SD">
+      <cat-item tags="SD"/>
+      <cat-item tags="SD.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_nbr">
+    <def-attr n="a_cas">
+      <attr-item tags="nom"/>
+      <attr-item tags="CD"/>
+    </def-attr>
+    <def-attr n="a_pos">
+      <attr-item tags="n"/>
+      <attr-item tags="v"/>
+      <attr-item tags="vblex"/>
+      <attr-item tags="adj"/>
+      <attr-item tags="adv"/>
+      <attr-item tags="prn"/>
+      <attr-item tags="SV"/>
+      <attr-item tags="SN"/>
+      <attr-item tags="SP"/>
+      <attr-item tags="SD"/>
+    </def-attr>
+    <def-attr n="a_num">
       <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="a_tran">
+      <attr-item tags="TD"/>
+    </def-attr>
+    <def-attr n="a_tense">
+      <attr-item tags="fut"/>
+      <attr-item tags="past"/>
+      <attr-item tags="FD"/>
+    </def-attr>
+    <def-attr n="a_mood">
+      <attr-item tags="ind"/>
+      <attr-item tags="MD"/>
     </def-attr>
   </section-def-attrs>
 
@@ -27,16 +69,351 @@
   </section-def-macros>
 
   <section-rules>
-    <rule comment="REGLA: SN">
+    <rule comment="REGLA: SP SP SV SN SV">
+      <pattern>
+        <pattern-item n="SP"/>
+        <pattern-item n="SP"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="5" part="lem"/>
+            <clip pos="5" part="a_pos"/>
+            <clip pos="5" part="a_tense"/>
+            <clip pos="5" part="a_mood"/>
+            <clip pos="5" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_cas"/>
+            <clip pos="4" part="a_num"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_tense"/>
+            <clip pos="3" part="a_mood"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- ытык пʼи ғелепнидь.
+          father eats the bread he bought. -->
+    <rule comment="REGLA: SN SP SV SN SV">
       <pattern>
         <pattern-item n="SN"/>
+        <pattern-item n="SP"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
       </pattern>
       <action>
         <out>
           <chunk>
             <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
+            <clip pos="1" part="a_pos"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="a_num"/>
             <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="5" part="lem"/>
+            <clip pos="5" part="a_pos"/>
+            <clip pos="5" part="a_tense"/>
+            <clip pos="5" part="a_mood"/>
+            <clip pos="5" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_cas"/>
+            <clip pos="4" part="a_num"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_tense"/>
+            <clip pos="3" part="a_mood"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- ни ытык ғелепнидь.
+          I eat the bread father bought. -->
+    <rule comment="REGLA: SP SN SV SN SV">
+      <pattern>
+        <pattern-item n="SP"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="5" part="lem"/>
+            <clip pos="5" part="a_pos"/>
+            <clip pos="5" part="a_tense"/>
+            <clip pos="5" part="a_mood"/>
+            <clip pos="5" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_cas"/>
+            <clip pos="4" part="a_num"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="2" part="a_cas"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_tense"/>
+            <clip pos="3" part="a_mood"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SD SN SV">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SD"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="a_pos"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="a_num"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_tense"/>
+            <clip pos="4" part="a_mood"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_cas"/>
+            <clip pos="3" part="a_num"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SN SD SN SV">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SD"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="a_pos"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="a_num"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="5" part="lem"/>
+            <clip pos="5" part="a_pos"/>
+            <clip pos="5" part="a_tense"/>
+            <clip pos="5" part="a_mood"/>
+            <clip pos="5" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_cas"/>
+            <clip pos="4" part="a_num"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="2" part="a_cas"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SN SN SV">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="a_pos"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="a_num"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_tense"/>
+            <clip pos="4" part="a_mood"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_cas"/>
+            <clip pos="3" part="a_num"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="2" part="a_cas"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SN SV">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="a_pos"/>
+            <clip pos="1" part="a_num"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_tense"/>
+            <clip pos="3" part="a_mood"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <lit-tag v="acc"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SP SV">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SP"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="a_pos"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="a_num"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_tense"/>
+            <clip pos="3" part="a_mood"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="2" part="a_cas"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="2" part="chcontent"/>
           </chunk>
         </out>
       </action>
@@ -52,4 +429,3 @@ Resources:
     http://wiki.apertium.org/wiki/A_long_introduction_to_transfer_rules
     http://wiki.apertium.org/wiki/Transfer#Adding_structural_transfer_.28grammar.29_rules
 -->
-
