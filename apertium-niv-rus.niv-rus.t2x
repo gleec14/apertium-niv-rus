@@ -53,6 +53,25 @@
       <attr-item tags="ind"/>
       <attr-item tags="MD"/>
     </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+      <attr-item tags="PD"/>
+    </def-attr>
+    <def-attr n="a_gen">
+      <attr-item tags="m"/>
+      <attr-item tags="f"/>
+      <attr-item tags="mf"/>
+      <attr-item tags="nt"/>
+      <attr-item tags="GD"/>
+    </def-attr>
+    <def-attr n="a_anim">
+      <attr-item tags="aa"/>
+      <attr-item tags="an"/>
+      <attr-item tags="sint"/>
+      <attr-item tags="nn"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -94,8 +113,8 @@
           <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="a_pos"/>
-            <clip pos="4" part="a_cas"/>
             <clip pos="4" part="a_num"/>
+            <clip pos="4" part="a_cas"/>
             <clip pos="4" part="chcontent"/>
           </chunk>
           <b/>
@@ -129,8 +148,8 @@
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="a_num"/>
+            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
           <b/>
@@ -145,8 +164,8 @@
           <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="a_pos"/>
-            <clip pos="4" part="a_cas"/>
             <clip pos="4" part="a_num"/>
+            <clip pos="4" part="a_cas"/>
             <clip pos="4" part="chcontent"/>
           </chunk>
           <b/>
@@ -192,16 +211,16 @@
           <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="a_pos"/>
-            <clip pos="4" part="a_cas"/>
             <clip pos="4" part="a_num"/>
+            <clip pos="4" part="a_cas"/>
             <clip pos="4" part="chcontent"/>
           </chunk>
           <b/>
           <chunk>
             <clip pos="2" part="lem"/>
             <clip pos="2" part="a_pos"/>
-            <clip pos="2" part="a_cas"/>
             <clip pos="2" part="a_num"/>
+            <clip pos="2" part="a_cas"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
           <b/>
@@ -228,8 +247,8 @@
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="a_num"/>
+            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
           <b/>
@@ -248,8 +267,8 @@
           <chunk>
             <clip pos="3" part="lem"/>
             <clip pos="3" part="a_pos"/>
-            <clip pos="3" part="a_cas"/>
             <clip pos="3" part="a_num"/>
+            <clip pos="3" part="a_cas"/>
             <clip pos="3" part="chcontent"/>
           </chunk>
         </out>
@@ -269,8 +288,10 @@
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="a_num"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="a_gen"/>
+            <clip pos="1" part="a_pers"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
           <b/>
@@ -283,22 +304,34 @@
           </chunk>
           <b/>
           <chunk>
-            <clip pos="3" part="whole"/>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="4" part="a_gen"/>
+            <clip pos="4" part="a_anim"/>
+            <clip pos="4" part="a_num"/>
+            <lit-tag v="acc"/>
+            <clip pos="3" part="a_pers"/>
+            <clip pos="3" part="chcontent"/>
           </chunk>
           <b/>
           <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="a_pos"/>
-            <clip pos="4" part="a_cas"/>
             <clip pos="4" part="a_num"/>
+            <lit-tag v="acc"/>
+            <clip pos="4" part="a_gen"/>
+            <clip pos="4" part="a_pers"/>
+            <clip pos="4" part="a_anim"/>
             <clip pos="4" part="chcontent"/>
           </chunk>
           <b/>
           <chunk>
             <clip pos="2" part="lem"/>
             <clip pos="2" part="a_pos"/>
-            <clip pos="2" part="a_cas"/>
             <clip pos="2" part="a_num"/>
+            <clip pos="1" part="a_cas"/>
+            <clip pos="1" part="a_gen"/>
+            <clip pos="1" part="a_pers"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
         </out>
@@ -317,8 +350,8 @@
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="a_num"/>
+            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
           <b/>
@@ -333,16 +366,16 @@
           <chunk>
             <clip pos="3" part="lem"/>
             <clip pos="3" part="a_pos"/>
-            <clip pos="3" part="a_cas"/>
             <clip pos="3" part="a_num"/>
+            <clip pos="3" part="a_cas"/>
             <clip pos="3" part="chcontent"/>
           </chunk>
           <b/>
           <chunk>
             <clip pos="2" part="lem"/>
             <clip pos="2" part="a_pos"/>
-            <clip pos="2" part="a_cas"/>
             <clip pos="2" part="a_num"/>
+            <clip pos="2" part="a_cas"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
         </out>
@@ -395,8 +428,8 @@
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="a_num"/>
+            <clip pos="1" part="a_cas"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
           <b/>

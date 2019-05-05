@@ -98,6 +98,8 @@
     </def-attr>
     <def-attr n="a_anim">
       <attr-item tags="aa"/>
+      <attr-item tags="an"/>
+      <attr-item tags="sint"/>
       <attr-item tags="nn"/>
     </def-attr>
   </section-def-attrs>
@@ -269,6 +271,12 @@
                 <clip pos="1" side="sl" part="a_pers"/>
               </let>
             </when>
+            <otherwise>
+              <let>
+                <var n="person"/>
+                <lit-tag v="p3"/>
+              </let>
+            </otherwise>
           </choose>
     </def-macro>
     <!-- add determiner -->
@@ -291,6 +299,11 @@
           <with-param pos="1"/>
         </call-macro>
 
+        <!-- set person tag to p3 by default -->
+        <call-macro n="choose_person">
+          <with-param pos="1"/>
+        </call-macro>
+
         <!--
         <call-macro n="add_determiner">
           <with-param pos="1"/>
@@ -302,6 +315,9 @@
               <tag><lit-tag v="SN"/></tag> <!-- POS noun -->
               <tag><var n="number"/></tag> <!-- number -->
               <tag><var n="case"/></tag> <!-- case -->
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag> <!-- gender -->
+              <tag><clip pos="1" side="tl" part="a_anim"/></tag> <!-- anim -->
+              <tag><var n="person"/></tag> <!-- person -->
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -345,7 +361,6 @@
               <tag><lit-tag v="SV"/></tag> <!-- POS -->
               <tag><var n="tense"/></tag> <!-- tense -->
               <tag><lit-tag v="MD"/></tag> <!-- mood -->
-              <tag><lit-tag v="ND"/></tag> <!-- number -->
           </tags>
           <lu>
             <clip pos="1" side="tl" part="lem"/>
@@ -402,20 +417,22 @@
           <chunk name="determiner">
             <tags>
               <tag><lit-tag v="SD"/></tag> <!-- POS -->
-              <tag><clip pos="1" side="tl" part="a_poss"/></tag> <!-- possessive -->
-              <tag><clip pos="1" side="tl" part="a_def"/></tag> <!-- definiteness -->
               <tag><clip pos="1" side="tl" part="a_pers"/></tag> <!-- person -->
-              <tag><clip pos="1" side="tl" part="a_gen"/></tag> <!-- gender -->
-              <tag><clip pos="1" side="tl" part="a_num"/></tag> <!-- number -->
+              <tag><clip pos="1" side="tl" part="a_anim"/></tag> <!-- animacy -->
+              <tag><clip pos="2" side="tl" part="a_gen"/></tag> <!-- gender -->
+              <tag><clip pos="2" side="tl" part="a_anim"/></tag> <!-- anim -->
+              <tag><clip pos="2" side="tl" part="a_num"/></tag>  <!--number -->
+              <tag><clip pos="2" side="tl" part="a_case"/></tag>  <!--case -->
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_pos"/>
+              <clip pos="1" side="tl" part="a_poss"/>
+              <clip pos="1" side="tl" part="a_def"/>
               <lit-tag v="2"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
               <lit-tag v="5"/>
-              <lit-tag v="6"/>
             </lu>
           </chunk>
         </out>
