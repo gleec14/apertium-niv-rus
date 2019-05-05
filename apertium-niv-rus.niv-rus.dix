@@ -54,6 +54,7 @@
     <sdef n="mf"              c="Male or Female"/>
     <sdef n="un"              c="No gender"/>
     <sdef n="aa"              c="Animacy"/>
+    <sdef n="an"              c="Animate or Inanimate"/>
     <sdef n="nn"              c="Inanimate"/>
 
     <sdef n="du"              c="Dual"/>
@@ -118,7 +119,7 @@
    <section id="main" type="standard">
       <!-- Nouns -->
       <e><p><l>фывапролд<s n="n"/></l><r>привет<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
-      <e><p><l>ытык<s n="n"/></l><r>отец<s n="n"/></r><s n="m"/><s n="aa"/></p></e>
+      <e><p><l>ытык<s n="n"/></l><r>отец<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
       <e><p><l>умгу<s n="n"/></l><r>женщина<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>ӄан<s n="n"/></l><r>собака<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>ӈа<s n="n"/></l><r>животное<s n="n"/><s n="nt"/><s n="aa"/></r></p></e>
@@ -147,7 +148,7 @@
       <e><p><l>кинс<s n="n"/></l><r>чёрт<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
       <e><p><l>по<s n="n"/></l><r>деревня<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>кʼеӄ<s n="n"/></l><r>лиса<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
-      <e><p><l>чеврӄ<s n="n"/></l><r>птица<s n="n"/><s n="f"/><s n="a"/></r></p></e>
+      <e><p><l>чеврӄ<s n="n"/></l><r>птица<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>тупр̌<s n="n"/></l><r>перо<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
       <e><p><l>тюс<s n="n"/></l><r>мясо<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
       <e><p><l>мулк<s n="n"/></l><r>корзина<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
