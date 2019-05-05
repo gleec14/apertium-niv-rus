@@ -53,6 +53,8 @@
     <sdef n="m"               c="Masculine"/>
     <sdef n="mf"              c="Male or Female"/>
     <sdef n="un"              c="No gender"/>
+    <sdef n="aa"              c="Animacy"/>
+    <sdef n="nn"              c="Inanimate"/>
 
     <sdef n="du"              c="Dual"/>
     <sdef n="pl"              c="Plural"/>
@@ -117,7 +119,7 @@
       <!-- Nouns -->
       <e><p><l>фывапролд<s n="n"/></l><r>привет<s n="n"/></r></p></e>
       <e><p><l>ытык<s n="n"/></l><r>отец<s n="n"/></r></p></e>
-      <e><p><l>умгу<s n="n"/></l><r>женщина<s n="n"/></r></p></e>
+      <e><p><l>умгу<s n="n"/></l><r>женщина<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>ӄан<s n="n"/></l><r>собака<s n="n"/></r></p></e>
       <e><p><l>ӈа<s n="n"/></l><r>животное<s n="n"/></r></p></e>
       <e><p><l>тыф<s n="n"/></l><r>дом<s n="n"/></r></p></e>
