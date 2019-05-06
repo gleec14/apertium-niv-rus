@@ -36,6 +36,12 @@
       <attr-item tags="SP"/>
       <attr-item tags="SD"/>
     </def-attr>
+    <def-attr n="a_spos">
+      <attr-item tags="pers"/>
+      <attr-item tags="itg"/>
+      <attr-item tags="rel"/>
+      <attr-item tags="dem"/>
+    </def-attr>
     <def-attr n="a_num">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
@@ -78,6 +84,7 @@
 
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="pers_or_gen"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -86,6 +93,28 @@
         <var n="number"/>
         <lit v=""/>
       </let>
+    </def-macro>
+    <def-macro n="choose_gen_pers" npar="2">
+          <choose>
+            <when>
+              <test>
+                <equal>
+                  <clip pos="2" part="a_tense"/>
+                  <lit-tag v="fut"/>
+                </equal>
+              </test>
+              <let>
+                <var n="pers_or_gen"/>
+                <clip pos="1" part="a_pers"/>
+              </let>
+            </when>
+            <otherwise>
+              <let>
+                <var n="pers_or_gen"/>
+                <clip pos="1" part="a_gen"/>
+              </let>
+            </otherwise>
+          </choose>
     </def-macro>
   </section-def-macros>
 
@@ -424,7 +453,10 @@
           <chunk>
             <clip pos="3" part="lem"/>
             <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_tran"/>
             <clip pos="3" part="a_tense"/>
+            <clip pos="1" part="a_gen"/>
+            <clip pos="1" part="a_num"/>
             <clip pos="3" part="a_mood"/>
             <clip pos="3" part="chcontent"/>
           </chunk>
@@ -433,9 +465,10 @@
             <clip pos="2" part="lem"/>
             <clip pos="2" part="a_pos"/>
             <clip pos="2" part="a_num"/>
-            <clip pos="2" part="a_cas"/>
+            <lit-tag v="acc"/>
             <clip pos="2" part="a_gen"/>
             <clip pos="2" part="a_pers"/>
+            <clip pos="2" part="a_anim"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
         </out>
@@ -475,6 +508,42 @@
           </chunk>
         </out>
       </action>
+    </rule>
+
+      <rule comment="REGLA: SP SV">
+        <pattern>
+          <pattern-item n="SP"/>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="choose_gen_pers">
+            <with-param pos="1"/>
+            <with-param pos="2"/>
+          </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_spos"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="a_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="a_cas"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="2" part="a_tran"/>
+              <clip pos="2" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="2" part="a_mood"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
     </rule>
   </section-rules>
 </interchunk>

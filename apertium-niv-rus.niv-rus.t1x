@@ -45,6 +45,7 @@
       <attr-item tags="det"/>
     </def-attr>
     <def-attr n="a_spos">
+      <attr-item tags="pers"/>
       <attr-item tags="itg"/>
       <attr-item tags="rel"/>
       <attr-item tags="dem"/>
@@ -392,6 +393,12 @@
         <pattern-item n="prn"/>
       </pattern>
       <action>
+        <!-- set case tag to case in word if found
+             otherwise set case tag to nom -->
+        <call-macro n="choose_case">
+          <with-param pos="1"/>
+        </call-macro>
+
         <out>
           <chunk name="pronoun">
             <tags>
@@ -400,8 +407,8 @@
               <tag><clip pos="1" side="tl" part="a_anim"/></tag> <!-- animacy -->
               <tag><clip pos="1" side="tl" part="a_pers"/></tag> <!-- person -->
               <tag><clip pos="1" side ="tl" part="a_gen"/></tag> <!-- gender -->
-              <tag><clip pos="1" side ="tl" part="a_cas"/></tag> <!-- subj/obj -->
               <tag><clip pos="1" side ="tl" part="a_num"/></tag> <!-- number -->
+              <tag><var n="case"/></tag> <!-- subj/obj -->
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -411,7 +418,6 @@
               <lit-tag v="4"/>
               <lit-tag v="5"/>
               <lit-tag v="6"/>
-              <lit-tag v="7"/>
             </lu>
           </chunk>
         </out>
