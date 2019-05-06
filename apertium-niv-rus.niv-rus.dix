@@ -300,8 +300,8 @@
       <!-- transitive verbs -->
       <e><p><l>за<s n="v"/><s n="tv"/></l><r>бить<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>за<s n="v"/><s n="tv"/></l><r>побить<s n="vblex"/><s n="perf"/></r></p></e>
-      <e><p><l>во<s n="v"/><s n="tv"/></l><r>брать<s n="vblex"/><s n="impf"/></r></p></e>
-      <e><p><l>во<s n="v"/><s n="tv"/></l><r>взять<s n="vblex"/><s n="perf"/></r></p></e>
+      <e c="(и брать)"><p><l>во<s n="v"/><s n="tv"/></l><r>покупать<s n="vblex"/><s n="impf"/></r></p></e>
+      <e c="(и взять)"><p><l>во<s n="v"/><s n="tv"/></l><r>купить<s n="vblex"/><s n="perf"/></r></p></e>
       <e><p><l>даю<s n="v"/><s n="tv"/></l><r>писать<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>даю<s n="v"/><s n="tv"/></l><r>написать<s n="vblex"/><s n="perf"/></r></p></e>
       <!-- take/buy -->
