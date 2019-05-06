@@ -42,6 +42,8 @@
       <attr-item tags="ND"/>
     </def-attr>
     <def-attr n="a_tran">
+      <attr-item tags="tv"/>
+      <attr-item tags="iv"/>
       <attr-item tags="TD"/>
     </def-attr>
     <def-attr n="a_tense">
@@ -308,7 +310,10 @@
           <chunk>
             <clip pos="5" part="lem"/>
             <clip pos="5" part="a_pos"/>
+            <clip pos="5" part="a_tran"/>
             <clip pos="5" part="a_tense"/>
+            <clip pos="1" part="a_gen"/>
+            <clip pos="1" part="a_num"/>
             <clip pos="5" part="a_mood"/>
             <clip pos="5" part="chcontent"/>
           </chunk>
@@ -424,15 +429,15 @@
             <clip pos="3" part="chcontent"/>
           </chunk>
           <b/>
-            <chunk>
-              <clip pos="1" part="lem"/>
-              <clip pos="1" part="a_pos"/>
-              <clip pos="1" part="a_num"/>
-              <clip pos="1" part="a_cas"/>
-              <clip pos="1" part="a_gen"/>
-              <clip pos="1" part="a_pers"/>
-              <clip pos="1" part="chcontent"/>
-            </chunk>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="2" part="a_cas"/>
+            <clip pos="2" part="a_gen"/>
+            <clip pos="2" part="a_pers"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
         </out>
       </action>
     </rule>

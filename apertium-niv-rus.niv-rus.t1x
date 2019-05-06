@@ -57,12 +57,18 @@
       <attr-item tags="ND"/>
     </def-attr>
     <def-attr n="a_tran">
+      <attr-item tags="tv"/>
+      <attr-item tags="iv"/>
       <attr-item tags="TD"/>
     </def-attr>
     <def-attr n="a_tense">
       <attr-item tags="fut"/>
       <attr-item tags="past"/>
       <attr-item tags="FD"/>
+    </def-attr>
+    <def-attr n="a_aspect">
+      <attr-item tags="perf"/>
+      <attr-item tags="impf"/>
     </def-attr>
     <def-attr n="a_mood">
       <attr-item tags="ind"/>
@@ -365,7 +371,11 @@
           <lu>
             <clip pos="1" side="tl" part="lem"/>
             <clip pos="1" side="tl" part="a_pos"/>
+            <clip pos="1" side="tl" part="a_aspect"/>
+            <clip pos="1" side="sl" part="a_tran"/>
             <lit-tag v="2"/>
+            <lit-tag v="3"/>
+            <lit-tag v="4"/>
           </lu>
           </chunk>
         </out>
