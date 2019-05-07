@@ -166,56 +166,60 @@
       </action>
     </rule>
 
-    <!-- ытык пʼи ғелепнидь.
-          father eats the bread he bought. -->
-    <rule comment="REGLA: SN SP SV SN SV">
+    <rule comment="REGLA: SN SV SN SV">
       <pattern>
         <pattern-item n="SN"/>
-        <pattern-item n="SP"/>
         <pattern-item n="SV"/>
         <pattern-item n="SN"/>
         <pattern-item n="SV"/>
       </pattern>
       <action>
+        <call-macro n="choose_gen_pers">
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+        </call-macro>
         <out>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <clip pos="3" part="a_num"/>
+            <clip pos="3" part="a_cas"/>
+            <clip pos="3" part="a_gen"/>
+            <clip pos="3" part="a_pers"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="2" part="a_tran"/>
+            <clip pos="2" part="a_tense"/>
+            <clip pos="3" part="a_gen"/>
+            <clip pos="3" part="a_anim"/>
+            <clip pos="3" part="a_num"/>
+            <clip pos="3" part="a_case"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="a_pos"/>
             <clip pos="1" part="a_num"/>
-            <clip pos="1" part="a_cas"/>
+            <lit-tag v="acc"/>
             <clip pos="1" part="a_gen"/>
             <clip pos="1" part="a_pers"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
           <b/>
           <chunk>
-            <clip pos="5" part="lem"/>
-            <clip pos="5" part="a_pos"/>
-            <clip pos="5" part="a_tense"/>
-            <clip pos="5" part="a_mood"/>
-            <clip pos="5" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_tran"/>
+            <clip pos="4" part="a_tense"/>
+            <var n="pers_or_gen"/>
             <clip pos="4" part="a_num"/>
-            <clip pos="4" part="a_cas"/>
-            <clip pos="4" part="a_gen"/>
-            <clip pos="4" part="a_pers"/>
+            <clip pos="2" part="a_mood"/>
             <clip pos="4" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="2" part="whole"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="a_pos"/>
-            <clip pos="3" part="a_tense"/>
-            <clip pos="3" part="a_mood"/>
-            <clip pos="3" part="chcontent"/>
           </chunk>
         </out>
       </action>
@@ -266,50 +270,6 @@
             <clip pos="3" part="a_pos"/>
             <clip pos="3" part="a_tense"/>
             <clip pos="3" part="a_mood"/>
-            <clip pos="3" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: SN SD SN SV">
-      <pattern>
-        <pattern-item n="SN"/>
-        <pattern-item n="SD"/>
-        <pattern-item n="SN"/>
-        <pattern-item n="SV"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_num"/>
-            <clip pos="1" part="a_cas"/>
-            <clip pos="1" part="a_gen"/>
-            <clip pos="1" part="a_pers"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="4" part="lem"/>
-            <clip pos="4" part="a_pos"/>
-            <clip pos="4" part="a_tense"/>
-            <clip pos="4" part="a_mood"/>
-            <clip pos="4" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="2" part="whole"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="a_pos"/>
-            <clip pos="3" part="a_num"/>
-            <clip pos="3" part="a_cas"/>
-            <clip pos="3" part="a_gen"/>
-            <clip pos="3" part="a_pers"/>
             <clip pos="3" part="chcontent"/>
           </chunk>
         </out>
@@ -382,10 +342,10 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: SN SN SN SV">
+    <rule comment="REGLA: SN SD SN SV">
       <pattern>
         <pattern-item n="SN"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="SD"/>
         <pattern-item n="SN"/>
         <pattern-item n="SV"/>
       </pattern>
@@ -404,113 +364,38 @@
           <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_tran"/>
             <clip pos="4" part="a_tense"/>
+            <clip pos="1" part="a_gen"/>
+            <clip pos="1" part="a_num"/>
             <clip pos="4" part="a_mood"/>
             <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="3" part="a_gen"/>
+            <clip pos="3" part="a_anim"/>
+            <clip pos="3" part="a_num"/>
+            <lit-tag v="acc"/>
+            <clip pos="2" part="chcontent"/>
           </chunk>
           <b/>
           <chunk>
             <clip pos="3" part="lem"/>
             <clip pos="3" part="a_pos"/>
             <clip pos="3" part="a_num"/>
-            <clip pos="3" part="a_cas"/>
-            <clip pos="3" part="a_gen"/>
-            <clip pos="3" part="a_pers"/>
-            <clip pos="3" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="a_pos"/>
-            <clip pos="2" part="a_num"/>
-            <clip pos="2" part="a_cas"/>
-            <clip pos="2" part="a_gen"/>
-            <clip pos="2" part="a_pers"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: SN SN SV">
-      <pattern>
-        <pattern-item n="SN"/>
-        <pattern-item n="SN"/>
-        <pattern-item n="SV"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_num"/>
-            <clip pos="1" part="a_cas"/>
-            <clip pos="1" part="a_gen"/>
-            <clip pos="1" part="a_pers"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="a_pos"/>
-            <clip pos="3" part="a_tran"/>
-            <clip pos="3" part="a_tense"/>
-            <clip pos="1" part="a_gen"/>
-            <clip pos="1" part="a_num"/>
-            <clip pos="3" part="a_mood"/>
-            <clip pos="3" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="a_pos"/>
-            <clip pos="2" part="a_num"/>
             <lit-tag v="acc"/>
-            <clip pos="2" part="a_gen"/>
-            <clip pos="2" part="a_pers"/>
-            <clip pos="2" part="a_anim"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: SN SP SV">
-      <pattern>
-        <pattern-item n="SN"/>
-        <pattern-item n="SP"/>
-        <pattern-item n="SV"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="a_pos"/>
-            <clip pos="1" part="a_num"/>
-            <clip pos="1" part="a_cas"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-          <b/>
-          <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="a_pos"/>
-            <clip pos="3" part="a_tense"/>
-            <clip pos="3" part="a_mood"/>
+            <clip pos="3" part="a_anim"/>
+            <clip pos="3" part="a_gen"/>
             <clip pos="3" part="chcontent"/>
           </chunk>
-          <b/>
-          <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="a_pos"/>
-            <clip pos="2" part="a_cas"/>
-            <clip pos="2" part="a_num"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
         </out>
       </action>
     </rule>
 
-      <rule comment="REGLA: SP SV">
+    <rule comment="REGLA: SP SV">
         <pattern>
           <pattern-item n="SP"/>
           <pattern-item n="SV"/>
@@ -545,6 +430,181 @@
           </out>
         </action>
     </rule>
+
+    <rule comment="REGLA: SP SN SV">
+        <pattern>
+          <pattern-item n="SP"/>
+          <pattern-item n="SN"/>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="choose_gen_pers">
+            <with-param pos="1"/>
+            <with-param pos="3"/>
+          </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_spos"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="a_gen"/>
+              <clip pos="1" part="a_anim"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="a_cas"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="a_pos"/>
+              <clip pos="3" part="a_tran"/>
+              <clip pos="3" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="3" part="a_mood"/>
+              <clip pos="3" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="2" part="a_spos"/>
+              <clip pos="2" part="a_num"/>
+              <lit-tag v="acc"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
+    <rule comment="REGLA: SN SV SV">
+        <pattern>
+          <pattern-item n="SN"/>
+          <pattern-item n="SV"/>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="choose_gen_pers">
+            <with-param pos="1"/>
+            <with-param pos="3"/>
+          </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="a_cas"/>
+              <clip pos="1" part="a_gen"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="a_pos"/>
+              <clip pos="3" part="a_tran"/>
+              <clip pos="3" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="3" part="a_mood"/>
+              <clip pos="3" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="2" part="a_tran"/>
+              <clip pos="2" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="2" part="a_mood"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
+    <rule comment="REGLA: SN SN SV">
+        <pattern>
+          <pattern-item n="SN"/>
+          <pattern-item n="SN"/>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="choose_gen_pers">
+            <with-param pos="1"/>
+            <with-param pos="2"/>
+          </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="a_cas"/>
+              <clip pos="1" part="a_gen"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="a_pos"/>
+              <clip pos="3" part="a_tran"/>
+              <clip pos="3" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="3" part="a_mood"/>
+              <clip pos="3" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="2" part="a_num"/>
+              <lit-tag v="acc"/>
+              <clip pos="2" part="a_gen"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
+    <rule comment="REGLA: SN SV">
+        <pattern>
+          <pattern-item n="SN"/>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="choose_gen_pers">
+            <with-param pos="1"/>
+            <with-param pos="2"/>
+          </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="a_cas"/>
+              <clip pos="1" part="a_gen"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="2" part="a_tran"/>
+              <clip pos="2" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="2" part="a_mood"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
   </section-rules>
 </interchunk>
 
