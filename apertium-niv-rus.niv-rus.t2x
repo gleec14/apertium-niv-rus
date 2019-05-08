@@ -655,15 +655,29 @@
           <pattern-item n="SV"/>
         </pattern>
         <action>
-          <call-macro n="choose_gen_pers">
-            <with-param pos="1"/>
-            <with-param pos="2"/>
-          </call-macro>
+          <choose>
+            <when>
+              <test>
+                <equal>
+                  <clip pos="2" part="a_tense"/>
+                  <lit-tag v="fut"/>
+                </equal>
+              </test>
+              <let>
+                <var n="pers_or_gen"/>
+                <clip pos="1" part="a_pers"/>
+              </let>
+            </when>
+            <otherwise>
+              <let>
+                <var n="pers_or_gen"/>
+                <lit-tag v="m"/>
+              </let>
+            </otherwise>
+          </choose>
           <out>
             <chunk>
               <clip pos="1" part="lem"/>
-              <clip pos="1" part="a_pers"/>
-              <clip pos="1" part="a_num"/>
               <clip pos="1" part="chcontent"/>
             </chunk>
             <b/>
