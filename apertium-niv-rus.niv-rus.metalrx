@@ -1,0 +1,171 @@
+<metalrx>
+  <def-seqs>
+    <def-seq n="perfs">
+      <or>
+        <match lemma="побить"/>
+        <match lemma="взять"/>
+        <match lemma="написать"/>
+        <match lemma="купить"/>
+        <match lemma="возненавидеть"/>
+        <match lemma="посмотреть"/>
+        <match lemma="убить"/>
+        <match lemma="убить"/>
+        <match lemma="выстрелить"/>
+        <match lemma="ощипать"/>
+        <match lemma="поджарить"/>
+        <match lemma="бросить"/>
+        <match lemma="использовать"/>
+        <match lemma="порвать"/>
+        <match lemma="поцеловать"/>
+        <match lemma="накормить"/>
+        <match lemma="обругать"/>
+        <match lemma="похвалить"/>
+        <match lemma="позвать"/>
+        <match lemma="встретить"/>
+        <match lemma="подождать"/>
+        <match lemma="спасти"/>
+        <match lemma="увидеть"/>
+        <match lemma="принести"/>
+        <match lemma="дать"/>
+        <match lemma="пройти"/>
+        <match lemma="прикоснуться"/>
+        <match lemma="принести"/>
+        <match lemma="полюбить"/>
+        <match lemma="переплыть"/>
+        <match lemma="вытащить"/>
+        <match lemma="накормить"/>
+        <match lemma="обслужить"/>
+        <match lemma="избежать"/>
+        <match lemma="привыкнуть"/>
+        <match lemma="погрозить"/>
+        <match lemma="побеспокоить"/>
+        <match lemma="смазать"/>
+        <match lemma="вытащить"/>
+        <match lemma="помыть"/>
+        <match lemma="постирать"/>
+        <match lemma="поесть"/>
+        <match lemma="съесть"/>
+        <match lemma="поесть"/>
+        <match lemma="съесть"/>
+        <match lemma="прийти"/>
+        <match lemma="умереть"/>
+        <match lemma="поспать"/>
+        <match lemma="выйти"/>
+        <match lemma="войти"/>
+        <match lemma="рассердиться"/>
+        <match lemma="побояться"/>
+        <match lemma="закричать"/>
+        <match lemma="крикнуть"/>
+        <match lemma="убежать"/>
+        <match lemma="умолкнуть"/>
+        <match lemma="постоять"/>
+        <match lemma="упасть"/>
+        <match lemma="обрадоваться"/>
+        <match lemma="прицелиться"/>
+        <match lemma="открыть"/>
+        <match lemma="отдохнуть"/>
+        <match lemma="поспорить"/>
+        <match lemma="побояться"/>
+      </or>
+    </def-seq>
+    <def-seq n="impf">
+      <or>
+        <match lemma="бить"/>
+        <match lemma="брать"/>
+        <match lemma="писать"/>
+        <match lemma="покупать"/>
+        <match lemma="ненавидеть"/>
+        <match lemma="смотреть"/>
+        <match lemma="убивать"/>
+        <match lemma="убивать"/>
+        <match lemma="стрелять"/>
+        <match lemma="щипать"/>
+        <match lemma="жарить"/>
+        <match lemma="бросать"/>
+        <match lemma="использовать"/>
+        <match lemma="рвать"/>
+        <match lemma="целовать"/>
+        <match lemma="кормить"/>
+        <match lemma="ругать"/>
+        <match lemma="хвалить"/>
+        <match lemma="звать"/>
+        <match lemma="встречать"/>
+        <match lemma="ждать"/>
+        <match lemma="спасать"/>
+        <match lemma="видеть"/>
+        <match lemma="приносить"/>
+        <match lemma="давать"/>
+        <match lemma="проходить"/>
+        <match lemma="прикасаться"/>
+        <match lemma="приносить"/>
+        <match lemma="любить"/>
+        <match lemma="переплывать"/>
+        <match lemma="вытаскивать"/>
+        <match lemma="кормить"/>
+        <match lemma="обслуживать"/>
+        <match lemma="избегать"/>
+        <match lemma="привыкать"/>
+        <match lemma="грозить"/>
+        <match lemma="беспокоить"/>
+        <match lemma="смазывать"/>
+        <match lemma="вытаскивать"/>
+        <match lemma="мыть"/>
+        <match lemma="стирать"/>
+        <match lemma="есть"/>
+        <match lemma="есть"/>
+        <match lemma="приходить"/>
+        <match lemma="умирать"/>
+        <match lemma="бредить"/>
+        <match lemma="спать"/>
+        <match lemma="идти"/>
+        <match lemma="ходить"/>
+        <match lemma="выходить"/>
+        <match lemma="входить"/>
+        <match lemma="сердиться"/>
+        <match lemma="бояться"/>
+        <match lemma="кричать"/>
+        <match lemma="убегать"/>
+        <match lemma="умолкать"/>
+        <match lemma="стоять"/>
+        <match lemma="падать"/>
+        <match lemma="радоваться"/>
+        <match lemma="прицеливаться"/>
+        <match lemma="целиться"/>
+        <match lemma="открывать"/>
+        <match lemma="отдыхать"/>
+        <match lemma="баловаться"/>
+        <match lemma="спорить"/>
+        <match lemma="бояться"/>
+      </or>
+    </def-seq>
+  </def-seqs>
+  <rules>
+    <!--
+      This rule chooses "energía" as the translation of "power" when it is preceded by "wind".
+      Add your own rules within <rule> here, using the resources below as a guide
+    -->
+
+    <rule>
+      <match lemma="wind"/>
+      <match lemma="power" tags="n.*">
+        <select lemma="energía" tags="n.*"/>
+      </match>
+    </rule>
+
+    <rule>
+      <match tags="v.*.fut.*">
+        <select lemma="*" tags="vblex.perf.*"/>
+      </match>
+    </rule>
+
+  </rules>
+
+</metalrx>
+
+<!--
+Resources:
+    http://wiki.apertium.org/wiki/How_to_get_started_with_lexical_selection_rules
+    http://wiki.apertium.org/wiki/Constraint-based_lexical_selection
+    http://wiki.apertium.org/wiki/Lexical_selection
+    http://wiki.apertium.org/wiki/Learning_rules_from_parallel_and_non-parallel_corpora
+-->

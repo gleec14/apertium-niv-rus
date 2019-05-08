@@ -17,6 +17,10 @@
       <cat-item tags="SD"/>
       <cat-item tags="SD.*"/>
     </def-cat>
+    <def-cat n="SA">
+      <cat-item tags="SA"/>
+      <cat-item tags="SA.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -60,6 +64,11 @@
     <def-attr n="a_mood">
       <attr-item tags="ind"/>
       <attr-item tags="MD"/>
+    </def-attr>
+    <def-attr n="a_deg">
+      <attr-item tags="comp"/>
+      <attr-item tags="sup"/>
+      <attr-item tags="DD"/>
     </def-attr>
     <def-attr n="a_pers">
       <attr-item tags="p1"/>
@@ -112,6 +121,41 @@
               <let>
                 <var n="pers_or_gen"/>
                 <clip pos="1" part="a_gen"/>
+              </let>
+            </otherwise>
+          </choose>
+    </def-macro>
+
+    <def-macro n="set_default_agreement" npar="1">
+          <choose>
+            <when>
+              <test>
+                <equal>
+                  <clip pos="1" part="a_tense"/>
+                  <lit-tag v="fut"/>
+                </equal>
+              </test>
+              <let>
+                <var n="pers_or_gen"/>
+                <lit-tag v="p3"/>
+              </let>
+            </when>
+            <when>
+              <test>
+                <equal>
+                  <clip pos="1" part="a_tense"/>
+                  <lit-tag v="pres"/>
+                </equal>
+              </test>
+              <let>
+                <var n="pers_or_gen"/>
+                <lit-tag v="p3"/>
+              </let>
+            </when>
+            <otherwise>
+              <let>
+                <var n="pers_or_gen"/>
+                <lit-tag v="m"/>
               </let>
             </otherwise>
           </choose>
@@ -604,6 +648,62 @@
           </out>
         </action>
     </rule>
+
+    <rule comment="REGLA: SA SV">
+        <pattern>
+          <pattern-item n="SA"/>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="choose_gen_pers">
+            <with-param pos="1"/>
+            <with-param pos="2"/>
+          </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="2" part="a_tran"/>
+              <clip pos="2" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="2" part="a_mood"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
+    <rule comment="REGLA: SV">
+        <pattern>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="set_default_agreement">
+            <with-param pos="1"/>
+          </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_tran"/>
+              <clip pos="1" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <lit-tag v="sg"/>
+              <clip pos="1" part="a_mood"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
 
   </section-rules>
 </interchunk>

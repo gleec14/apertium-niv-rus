@@ -309,7 +309,7 @@
       <e><p><l>ғе<s n="v"/><s n="tv"/></l><r>купить<s n="vblex"/><s n="perf"/></r></p></e>
       <e><p><l>ӄала<s n="v"/><s n="tv"/></l><r>ненавидеть<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>ӄала<s n="v"/><s n="tv"/></l><r>возненавидеть<s n="vblex"/><s n="perf"/></r></p></e>
-      <e><p><l>ама<s n="v"/><s n="tv"/></l><r><s n="vblex"/><s n="impf"/></r></p></e>
+      <e><p><l>ама<s n="v"/><s n="tv"/></l><r>смотреть<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>ама<s n="v"/><s n="tv"/></l><r>посмотреть<s n="vblex"/><s n="perf"/></r></p></e>
       <e><p><l>иғ<s n="v"/><s n="tv"/></l><r>убивать<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>иғ<s n="v"/><s n="tv"/></l><r>убить<s n="vblex"/><s n="perf"/></r></p></e>
@@ -451,6 +451,7 @@
       <e><p><l>к’лу<s n="v"/><s n="iv"/></l><r>бояться<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>к’лу<s n="v"/><s n="iv"/></l><r>побояться<s n="vblex"/><s n="perf"/></r></p></e>
       <e><p><l>вуквук<s n="v"/><s n="iv"/></l><r>тёмный<s n="adj"/></r></p></e>
+      <e><p><l>малғо<s n="v"/><s n="iv"/></l><r>много<s n="adv"/></r></p></e>
 
       <!-- pronouns -->
       <e><p><l>ни<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>я<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
@@ -486,6 +487,8 @@
       <e><p><l>аньтьый<s n="adv"/></l><r>ещё раз<s n="adv"/></r></p></e>
       <e><p><l>эрғали<s n="adv"/></l><r>много<s n="adv"/></r></p></e>
       <e><p><l>эрғале<s n="adv"/></l><r>много<s n="adv"/></r></p></e>
+
+      <e><p><l>малғо<s n="adv"/></l><r>много<s n="adv"/></r></p></e>
 
       <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
       <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>

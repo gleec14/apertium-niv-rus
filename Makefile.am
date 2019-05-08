@@ -128,6 +128,11 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 ## Lexical selection rules
 ###############################################################################
 
+%.lrx: metalrx-to-lrx.xslt %.metalrx
+	xsltproc $^ > $@.tmp
+	@xmllint --format $@.tmp > $@
+	@rm $@.tmp
+
 $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
 	lrx-comp $< $@
 
@@ -232,4 +237,3 @@ test: all
 	@echo "house" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
-

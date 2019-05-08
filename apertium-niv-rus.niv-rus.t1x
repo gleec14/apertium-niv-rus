@@ -14,6 +14,9 @@
     <def-cat n="det">
       <cat-item tags="det.*"/>
     </def-cat>
+    <def-cat n="adv">
+      <cat-item tags="adv.*"/>
+    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
@@ -74,6 +77,11 @@
     <def-attr n="a_mood">
       <attr-item tags="ind"/>
       <attr-item tags="MD"/>
+    </def-attr>
+    <def-attr n="a_deg">
+      <attr-item tags="comp"/>
+      <attr-item tags="sup"/>
+      <attr-item tags="DD"/>
     </def-attr>
     <def-attr n="a_pers">
       <attr-item tags="p1"/>
@@ -377,6 +385,30 @@
             <lit-tag v="2"/>
             <lit-tag v="3"/>
             <lit-tag v="4"/>
+          </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: ADVERB">
+      <pattern>
+        <pattern-item n="adv"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="adverb">
+            <tags>
+              <tag><lit-tag v="SA"/></tag> <!-- POS -->
+              <tag><clip pos="1" side="sl" part="a_pers"/></tag>
+              <tag><clip pos="1" side="sl" part="a_num"/></tag>
+          </tags>
+          <lu>
+            <clip pos="1" side="tl" part="lem"/>
+            <clip pos="1" side="tl" part="a_pos"/>
+            <clip pos="1" side="tl" part="a_deg"/>
+            <lit-tag v="2"/>
+            <lit-tag v="3"/>
           </lu>
           </chunk>
         </out>
