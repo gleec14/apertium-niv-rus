@@ -134,10 +134,10 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	@rm $@.tmp
 
 $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
-	lrx-comp $< $@
+	../apertium-lex-tools/lrx-comp $< $@
 
 $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
-	lrx-comp $< $@
+	../apertium-lex-tools/lrx-comp $< $@
 
 ###############################################################################
 ## Structural transfer rules

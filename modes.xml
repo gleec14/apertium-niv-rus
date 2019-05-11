@@ -17,7 +17,7 @@
       <program name="lt-proc -b">
         <file name="niv-rus.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="../apertium-lex-tools/lrx-proc">
         <file name="niv-rus.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -55,7 +55,7 @@
       <program name="lt-proc -b">
         <file name="niv-rus.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="../apertium-lex-tools/lrx-proc">
         <file name="niv-rus.autolex.bin"/>
       </program>
     </pipeline>
@@ -77,7 +77,7 @@
       <program name="lt-proc -b">
         <file name="rus-niv.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="../apertium-lex-tools/lrx-proc">
         <file name="rus-niv.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
