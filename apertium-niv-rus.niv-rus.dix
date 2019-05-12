@@ -147,7 +147,7 @@
       <e><p><l>леп<s n="n"/></l><r>хлеб<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>ларӄ<s n="n"/></l><r>рубашка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>кинс<s n="n"/></l><r>чёрт<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
-      <e><p><l>по<s n="n"/></l><r>деревня<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+      <e><p><l>во<s n="n"/></l><r>деревня<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>кʼеӄ<s n="n"/></l><r>лиса<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>чеврӄ<s n="n"/></l><r>птица<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>тупр̌<s n="n"/></l><r>перо<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
@@ -452,6 +452,8 @@
       <e><p><l>к’лу<s n="v"/><s n="iv"/></l><r>побояться<s n="vblex"/><s n="perf"/></r></p></e>
       <e><p><l>вуквук<s n="v"/><s n="iv"/></l><r>тёмный<s n="adj"/></r></p></e>
       <e><p><l>малғо<s n="v"/><s n="iv"/></l><r>много<s n="adv"/></r></p></e>
+      <e><p><l>ӄʼо<s n="v"/><s n="iv"/></l><r>спать<s n="vblex"/><s n="impf"/></r></p></e>
+      <e><p><l>ӄʼо<s n="v"/><s n="iv"/></l><r>поспать<s n="vblex"/><s n="perf"/></r></p></e>
 
       <!-- pronouns -->
       <e><p><l>ни<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>я<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>

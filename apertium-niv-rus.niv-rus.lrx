@@ -18,11 +18,37 @@
   </rule>
 
   <rule>
-    <match tags="v.*.past.*">
+    <or>
+      <match lemma="ӿоӻорӈан"/>
+      <match lemma="ӿаӈан"/>
+    </or>
+    <match/>
+    <match tags="v.*">
       <select tags="vblex.perf.*"/>
     </match>
   </rule>
 
+  <rule>
+    <or>
+      <match lemma="ӿоӻорӈан"/>
+      <match lemma="ӿаӈан"/>
+    </or>
+    <match tags="v.*">
+      <select tags="vblex.perf.*"/>
+    </match>
+  </rule>
+
+  <rule>
+    <or>
+      <match lemma="ӿоӻорӈан"/>
+      <match lemma="ӿаӈан"/>
+    </or>
+    <match/>
+    <match/>
+    <match tags="v.*">
+      <select tags="vblex.perf.*"/>
+    </match>
+  </rule>
 </rules>
 
 <!--
