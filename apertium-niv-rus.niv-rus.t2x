@@ -603,6 +603,48 @@
         </action>
     </rule>
 
+    <rule comment="REGLA: SP SD SN">
+        <pattern>
+          <pattern-item n="SP"/>
+          <pattern-item n="SD"/>
+          <pattern-item n="SN"/>
+        </pattern>
+        <action>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_spos"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="a_gen"/>
+              <clip pos="1" part="a_anim"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="a_cas"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="3" part="a_gen"/>
+              <clip pos="3" part="a_anim"/>
+              <clip pos="3" part="a_num"/>
+              <clip pos="3" part="a_cas"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="a_pos"/>
+              <clip pos="3" part="a_spos"/>
+              <clip pos="3" part="a_num"/>
+              <clip pos="3" part="a_cas"/>
+              <clip pos="3" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
     <rule comment="REGLA: SN SV SV">
         <pattern>
           <pattern-item n="SN"/>

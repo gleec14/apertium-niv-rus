@@ -293,7 +293,7 @@
       <e><p><l>ӈалу<s n="n"/></l><r>залив<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>ки<s n="n"/></l><r>обувь<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>ӄʼоӻа<s n="n"/></l><r>характер<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
-      <e><p><l>утку<s n="n"/></l><r>муж<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+      <e><p><l>утку<s n="n"/></l><r>муж<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 
       <!-- Proper nouns -->
       <e><p><l>Иисус<s n="pn"/></l><r>Иисус<s n="np"/><s n="ant"/><s n="m"/><s n="sg"/></r></p></e>
@@ -474,6 +474,9 @@
       <e><p><l>тыдь<s n="prn"/><s n="dem"/></l><r>это<s n="prn"/><s n="dem"/><s n="nt"/><s n="sg"/></r></p></e>
       <e><p><l>ӿы<s n="det"/><s n="dem"/></l><r>тот<s n="det"/><s n="dem"/></r></p></e>
       <e><p><l>ты<s n="det"/><s n="dem"/></l><r>этот<s n="det"/><s n="dem"/></r></p></e>
+
+      <!-- determiners -->
+      <e><p><l>ни<s n="det"/><s n="pers"/><s n="p1"/><s n="sg"/><s n="poss"/></l><r>мой<s n="det"/><s n="pos"/></r></p></e>
 
       <!-- Adverbs -->
       <e c="(thereupon)"><p><l>ӿоӻор<s n="cnjadv"/></l><r>затем<s n="adv"/></r></p></e>
