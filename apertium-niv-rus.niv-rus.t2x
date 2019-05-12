@@ -35,6 +35,7 @@
       <attr-item tags="adj"/>
       <attr-item tags="adv"/>
       <attr-item tags="prn"/>
+      <attr-item tags="pr"/>
       <attr-item tags="SV"/>
       <attr-item tags="SN"/>
       <attr-item tags="SP"/>
@@ -81,6 +82,7 @@
       <attr-item tags="f"/>
       <attr-item tags="mf"/>
       <attr-item tags="nt"/>
+      <attr-item tags="mfn"/>
       <attr-item tags="GD"/>
     </def-attr>
     <def-attr n="a_anim">
@@ -94,6 +96,7 @@
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="pers_or_gen"/>
+    <def-var n="preposition"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -517,6 +520,84 @@
               <clip pos="2" part="a_num"/>
               <lit-tag v="acc"/>
               <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+        </action>
+    </rule>
+
+    <rule comment="REGLA: SP SD SN SV">
+        <pattern>
+          <pattern-item n="SP"/>
+          <pattern-item n="SD"/>
+          <pattern-item n="SN"/>
+          <pattern-item n="SV"/>
+        </pattern>
+        <action>
+          <call-macro n="choose_gen_pers">
+            <with-param pos="1"/>
+            <with-param pos="3"/>
+          </call-macro>
+          <let>
+            <var n="preposition"/>
+            <concat>
+              <lit v= "в"/>
+              <lit-tag v = "pr"/>
+              <lit v= "{^в" />
+              <lit-tag v = "pr" />
+              <lit v= "$}" />
+            </concat>
+          </let>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="a_pos"/>
+              <clip pos="1" part="a_spos"/>
+              <clip pos="1" part="a_pers"/>
+              <clip pos="1" part="a_gen"/>
+              <clip pos="1" part="a_anim"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="1" part="a_cas"/>
+              <clip pos="1" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="4" part="lem"/>
+              <clip pos="4" part="a_pos"/>
+              <clip pos="4" part="a_tran"/>
+              <clip pos="4" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="4" part="a_mood"/>
+              <clip pos="4" part="chcontent"/>
+            </chunk>
+          </out>
+
+          <out>
+              <b/>
+              <chunk>
+                <var n="preposition"/>
+              </chunk>
+          </out>
+
+          <out>
+            <b/>
+            <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="3" part="a_gen"/>
+              <clip pos="3" part="a_anim"/>
+              <clip pos="3" part="a_num"/>
+              <lit-tag v="prp"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+            <b/>
+            <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="a_pos"/>
+              <clip pos="3" part="a_spos"/>
+              <clip pos="3" part="a_num"/>
+              <lit-tag v="prp"/>
+              <clip pos="3" part="chcontent"/>
             </chunk>
           </out>
         </action>
