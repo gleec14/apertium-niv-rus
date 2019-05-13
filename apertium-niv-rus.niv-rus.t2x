@@ -166,6 +166,57 @@
   </section-def-macros>
 
   <section-rules>
+    <rule comment="REGLA: SP SP SV SN">
+      <pattern>
+        <pattern-item n="SP"/>
+        <pattern-item n="SP"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+        <call-macro n="choose_gen_pers">
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="a_pos"/>
+            <lit-tag v="past"/>
+            <var n="pers_or_gen"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="a_pos"/>
+            <lit-tag v="det"/>
+            <clip pos="1" part="a_spos"/>
+            <clip pos="4" part="a_gen"/>
+            <clip pos="4" part="a_anim"/>
+            <clip pos="4" part="a_num"/>
+            <lit-tag v="acc"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_num"/>
+            <lit-tag v="acc"/>
+            <clip pos="4" part="a_gen"/>
+            <clip pos="4" part="a_pers"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: SP SP SV SN SV">
       <pattern>
         <pattern-item n="SP"/>
@@ -491,15 +542,7 @@
           </call-macro>
           <out>
             <chunk>
-              <clip pos="1" part="lem"/>
-              <clip pos="1" part="a_pos"/>
-              <clip pos="1" part="a_spos"/>
-              <clip pos="1" part="a_pers"/>
-              <clip pos="1" part="a_gen"/>
-              <clip pos="1" part="a_anim"/>
-              <clip pos="1" part="a_num"/>
-              <clip pos="1" part="a_cas"/>
-              <clip pos="1" part="chcontent"/>
+              <clip pos="1" part="whole"/>
             </chunk>
             <b/>
             <chunk>
@@ -549,15 +592,7 @@
           </let>
           <out>
             <chunk>
-              <clip pos="1" part="lem"/>
-              <clip pos="1" part="a_pos"/>
-              <clip pos="1" part="a_spos"/>
-              <clip pos="1" part="a_pers"/>
-              <clip pos="1" part="a_gen"/>
-              <clip pos="1" part="a_anim"/>
-              <clip pos="1" part="a_num"/>
-              <clip pos="1" part="a_cas"/>
-              <clip pos="1" part="chcontent"/>
+              <clip pos="1" part="whole"/>
             </chunk>
             <b/>
             <chunk>
@@ -612,15 +647,7 @@
         <action>
           <out>
             <chunk>
-              <clip pos="1" part="lem"/>
-              <clip pos="1" part="a_pos"/>
-              <clip pos="1" part="a_spos"/>
-              <clip pos="1" part="a_pers"/>
-              <clip pos="1" part="a_gen"/>
-              <clip pos="1" part="a_anim"/>
-              <clip pos="1" part="a_num"/>
-              <clip pos="1" part="a_cas"/>
-              <clip pos="1" part="chcontent"/>
+              <clip pos="1" part="whole"/>
             </chunk>
             <b/>
             <chunk>

@@ -462,21 +462,22 @@
           <chunk name="pronoun">
             <tags>
               <tag><lit-tag v="SP"/></tag> <!-- POS -->
+              <tag><clip pos="1" side="tl" part="a_pos"/></tag>  <!-- pos -->
               <tag><clip pos="1" side="tl" part="a_spos"/></tag> <!-- sub class of prn -->
-              <tag><clip pos="1" side="tl" part="a_anim"/></tag> <!-- animacy -->
               <tag><clip pos="1" side="tl" part="a_pers"/></tag> <!-- person -->
               <tag><clip pos="1" side ="tl" part="a_gen"/></tag> <!-- gender -->
+              <tag><clip pos="1" side="tl" part="a_anim"/></tag> <!-- animacy -->
               <tag><clip pos="1" side ="tl" part="a_num"/></tag> <!-- number -->
               <tag><var n="case"/></tag> <!-- subj/obj -->
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_pos"/>
               <lit-tag v="2"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
               <lit-tag v="5"/>
               <lit-tag v="6"/>
+              <lit-tag v="7"/>
             </lu>
           </chunk>
         </out>
