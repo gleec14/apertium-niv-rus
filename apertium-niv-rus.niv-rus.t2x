@@ -36,6 +36,7 @@
       <attr-item tags="adv"/>
       <attr-item tags="prn"/>
       <attr-item tags="pr"/>
+      <attr-item tags="cnjcoo"/>
       <attr-item tags="SV"/>
       <attr-item tags="SN"/>
       <attr-item tags="SP"/>
@@ -97,6 +98,7 @@
     <def-var n="number"/>
     <def-var n="pers_or_gen"/>
     <def-var n="preposition"/>
+    <def-var n="conjunction"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -276,6 +278,16 @@
           <with-param pos="3"/>
           <with-param pos="2"/>
         </call-macro>
+        <let>
+          <var n="conjunction"/>
+          <concat>
+            <lit v= "и"/>
+            <lit-tag v = "cnjcoo"/>
+            <lit v= "{^и" />
+            <lit-tag v = "cnjcoo" />
+            <lit v= "$}" />
+          </concat>
+        </let>
         <out>
           <chunk>
             <clip pos="3" part="lem"/>
@@ -292,10 +304,9 @@
             <clip pos="2" part="a_pos"/>
             <clip pos="2" part="a_tran"/>
             <clip pos="2" part="a_tense"/>
-            <clip pos="3" part="a_gen"/>
-            <clip pos="3" part="a_anim"/>
+            <var n="pers_or_gen"/>
             <clip pos="3" part="a_num"/>
-            <clip pos="3" part="a_case"/>
+            <clip pos="2" part="a_mood"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
           <b/>
@@ -310,12 +321,16 @@
           </chunk>
           <b/>
           <chunk>
+            <var n="conjunction"/>
+          </chunk>
+          <b/>
+          <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="a_pos"/>
             <clip pos="4" part="a_tran"/>
             <clip pos="4" part="a_tense"/>
             <var n="pers_or_gen"/>
-            <clip pos="4" part="a_num"/>
+            <clip pos="3" part="a_num"/>
             <clip pos="2" part="a_mood"/>
             <clip pos="4" part="chcontent"/>
           </chunk>
@@ -435,6 +450,88 @@
             <clip pos="1" part="a_gen"/>
             <clip pos="1" part="a_pers"/>
             <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SN SP SV SN SV">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SP"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <call-macro n="choose_gen_pers">
+          <with-param pos="5"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <let>
+          <var n="conjunction"/>
+          <concat>
+            <lit v= "и"/>
+            <lit-tag v = "cnjcoo"/>
+            <lit v= "{^и" />
+            <lit-tag v = "cnjcoo" />
+            <lit v= "$}" />
+          </concat>
+        </let>
+        <out>
+          <chunk>
+            <clip pos="5" part="lem"/>
+            <clip pos="5" part="a_pos"/>
+            <clip pos="5" part="a_num"/>
+            <clip pos="5" part="a_cas"/>
+            <clip pos="5" part="a_gen"/>
+            <clip pos="5" part="a_pers"/>
+            <clip pos="5" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="a_pos"/>
+            <clip pos="4" part="a_tran"/>
+            <clip pos="4" part="a_tense"/>
+            <var n="pers_or_gen"/>
+            <clip pos="5" part="a_num"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="a_pos"/>
+            <clip pos="2" part="a_num"/>
+            <clip pos="2" part="a_cas"/>
+            <clip pos="2" part="a_gen"/>
+            <clip pos="2" part="a_pers"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="a_pos"/>
+            <clip pos="1" part="a_num"/>
+            <lit-tag v="ins"/>
+            <clip pos="1" part="a_gen"/>
+            <clip pos="1" part="a_pers"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <var n="conjunction"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <clip pos="6" part="lem"/>
+            <clip pos="6" part="a_pos"/>
+            <clip pos="6" part="a_tran"/>
+            <clip pos="6" part="a_tense"/>
+            <var n="pers_or_gen"/>
+            <clip pos="5" part="a_num"/>
+            <clip pos="6" part="chcontent"/>
           </chunk>
         </out>
       </action>
@@ -676,6 +773,16 @@
             <with-param pos="1"/>
             <with-param pos="3"/>
           </call-macro>
+          <let>
+            <var n="conjunction"/>
+            <concat>
+              <lit v= "и"/>
+              <lit-tag v = "cnjcoo"/>
+              <lit v= "{^и" />
+              <lit-tag v = "cnjcoo" />
+              <lit v= "$}" />
+            </concat>
+          </let>
           <out>
             <chunk>
               <clip pos="1" part="lem"/>
@@ -688,6 +795,27 @@
             </chunk>
             <b/>
             <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="a_pos"/>
+              <clip pos="2" part="a_tran"/>
+              <clip pos="3" part="a_tense"/>
+              <var n="pers_or_gen"/>
+              <clip pos="1" part="a_num"/>
+              <clip pos="2" part="a_mood"/>
+              <clip pos="2" part="chcontent"/>
+            </chunk>
+          </out>
+
+          <out>
+            <b/>
+            <chunk>
+              <var n="conjunction"/>
+            </chunk>
+          </out>
+
+          <out>
+            <b/>
+            <chunk>
               <clip pos="3" part="lem"/>
               <clip pos="3" part="a_pos"/>
               <clip pos="3" part="a_tran"/>
@@ -696,17 +824,6 @@
               <clip pos="1" part="a_num"/>
               <clip pos="3" part="a_mood"/>
               <clip pos="3" part="chcontent"/>
-            </chunk>
-            <b/>
-            <chunk>
-              <clip pos="2" part="lem"/>
-              <clip pos="2" part="a_pos"/>
-              <clip pos="2" part="a_tran"/>
-              <clip pos="2" part="a_tense"/>
-              <var n="pers_or_gen"/>
-              <clip pos="1" part="a_num"/>
-              <clip pos="2" part="a_mood"/>
-              <clip pos="2" part="chcontent"/>
             </chunk>
           </out>
         </action>

@@ -139,8 +139,9 @@
       <e c="(of boat)"><p><l>арф<s n="n"/></l><r>сторона<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>ӿуньф<s n="n"/></l><r>бочка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>пердь<s n="n"/></l><r>бремя<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
-      <e><p><l>ыкын<s n="n"/></l><r>старший брат<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
-      <e><p><l>атик<s n="n"/></l><r>младший брат<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+      <e c="(старший)"><p><l>ыкын<s n="n"/></l><r>брат<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+      <e c="(младший)"><p><l>атик<s n="n"/></l><r>брат<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+      <e c="(старшая)"><p><l>нанак<s n="n"/></l><r>сестра<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>ытик<s n="n"/></l><r>бабушка<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
       <e><p><l>пос<s n="n"/></l><r>ткань<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>ӈафӄ<s n="n"/></l><r>друг<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
@@ -179,7 +180,7 @@
       <e><p><l>ӈамадь<s n="n"/></l><r>глаз<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>няӽ<s n="n"/></l><r>слеза<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>них<s n="n"/></l><r>макушка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
-      <e c="(of head)"><p><l>temple<s n="n"/></l><r>храм<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+      <e c="(of head)"><p><l>ӿеғми<s n="n"/></l><r>висок<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
       <e><p><l>т’а<s n="n"/></l><r>ухо<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
       <e><p><l>ӿеғми<s n="n"/></l><r>мочка<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
       <e><p><l>нос<s n="n"/></l><r>нос<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
@@ -383,11 +384,11 @@
       <e><p><l>зу<s n="v"/><s n="tv"/></l><r>стирать<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>зу<s n="v"/><s n="tv"/></l><r>постирать<s n="vblex"/><s n="perf"/></r></p></e>
       <!-- Bound -->
-      <e><p><l>ни<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/><s n="impf"/></r></p></e>
+      <e><p><l>ни<s n="v"/><s n="tv"/></l><r>есть¹<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>ни<s n="v"/><s n="tv"/></l><r>поесть<s n="vblex"/><s n="perf"/></r></p></e>
       <e><p><l>ни<s n="v"/><s n="tv"/></l><r>съесть<s n="vblex"/><s n="perf"/></r></p></e>
       <!-- Free -->
-      <e><p><l>инь<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/><s n="impf"/></r></p></e>
+      <e><p><l>инь<s n="v"/><s n="tv"/></l><r>есть¹<s n="vblex"/><s n="impf"/></r></p></e>
       <e><p><l>инь<s n="v"/><s n="tv"/></l><r>поесть<s n="vblex"/><s n="perf"/></r></p></e>
       <e><p><l>инь<s n="v"/><s n="tv"/></l><r>съесть<s n="vblex"/><s n="perf"/></r></p></e>
 
