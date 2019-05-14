@@ -1,12 +1,12 @@
-niv and Russian: `apertium-niv-rus`
+Nivkh and Russian: `apertium-niv-rus`
 ===============================================================================
 
-This is an Apertium language pair for translating between niv and
+This is an Apertium language pair for translating between Nivkh and
 Russian. What you can use this language package for:
 
-* Translating between niv and Russian
-* Morphological analysis of niv and Russian
-* Part-of-speech tagging of niv and Russian
+* Translating between Nivkh and Russian
+* Morphological analysis of Nivkh and Russian
+* Part-of-speech tagging of Nivkh and Russian
 
 For information on the latter two points, see subheading "For more
 information" below.
@@ -67,14 +67,24 @@ Files and data
 
 * [`apertium-niv-rus.niv-rus.dix`](apertium-niv-rus.niv-rus.dix) - Bilingual dictionary
 * [`apertium-niv-rus.niv-rus.t1x`](apertium-niv-rus.niv-rus.t1x) - Chunking rules for translating into Russian
-* [`apertium-niv-rus.rus-niv.t1x`](apertium-niv-rus.rus-niv.t1x) - Chunking rules for translating into niv
+* [`apertium-niv-rus.rus-niv.t1x`](apertium-niv-rus.rus-niv.t1x) - Chunking rules for translating into Nivkh
 * [`apertium-niv-rus.niv-rus.t2x`](apertium-niv-rus.niv-rus.t2x) - Interchunk rules for translating into Russian
-* [`apertium-niv-rus.rus-niv.t2x`](apertium-niv-rus.rus-niv.t2x) - Interchunk rules for translating into niv
+* [`apertium-niv-rus.rus-niv.t2x`](apertium-niv-rus.rus-niv.t2x) - Interchunk rules for translating into Nivkh
 * [`apertium-niv-rus.niv-rus.t3x`](apertium-niv-rus.niv-rus.t3x) - Postchunk rules for translating into Russian
-* [`apertium-niv-rus.rus-niv.t3x`](apertium-niv-rus.rus-niv.t3x) - Postchunk rules for translating into niv
+* [`apertium-niv-rus.rus-niv.t3x`](apertium-niv-rus.rus-niv.t3x) - Postchunk rules for translating into Nivkh
 * [`apertium-niv-rus.niv-rus.lrx`](apertium-niv-rus.niv-rus.lrx) - Lexical selection rules for translating into Russian
-* [`apertium-niv-rus.rus-niv.lrx`](apertium-niv-rus.rus-niv.lrx) - Lexical selection rules for translating into niv
+* [`apertium-niv-rus.rus-niv.lrx`](apertium-niv-rus.rus-niv.lrx) - Lexical selection rules for translating into Nivkh
 * [`modes.xml`](modes.xml) - Translation modes
+
+Running tests
+-------------------------------------------------------------------------------
+
+In order to reproduce the final results found at  https://wikis.swarthmore.edu/ling073/Nivkh_and_Russian,
+type in the following commands:
+```console
+$ cat corpus/niv-rus.test.2.txt | apertium -d . niv-rus
+TODO test translated sentence 1
+```
 
 For more information
 -------------------------------------------------------------------------------
@@ -82,6 +92,7 @@ For more information
 * http://wiki.apertium.org/wiki/Installation
 * http://wiki.apertium.org/wiki/apertium-niv-rus
 * http://wiki.apertium.org/wiki/Using_an_lttoolbox_dictionary
+* https://wikis.swarthmore.edu/ling073/Nivkh_and_Russian
 
 Help and support
 -------------------------------------------------------------------------------
